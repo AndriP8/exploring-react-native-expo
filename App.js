@@ -9,6 +9,7 @@ import CircleButton from "./CircleButton";
 import EmojiPicker from "./EmojiPicker";
 import EmojiList from "./EmojiList";
 import EmojiSticker from "./EmojiSticker";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 const PlaceholderImage =
   "https://docs.expo.dev/static/images/tutorial/background-image.png";
@@ -50,7 +51,7 @@ export default function App() {
   };
 
   return (
-    <View style={styles.container}>
+    <GestureHandlerRootView style={styles.container}>
       <View style={styles.imageContainer}>
         <ImageViewer
           PlaceholderImageSource={PlaceholderImage}
@@ -90,7 +91,7 @@ export default function App() {
       )}
 
       <StatusBar style="light" />
-    </View>
+    </GestureHandlerRootView>
   );
 }
 
